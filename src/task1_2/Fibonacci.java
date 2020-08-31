@@ -8,7 +8,7 @@ public class Fibonacci {
         double sum = 0;
 
 
-        System.out.print("The first " + n +" Fibonacci numbers are:\n");
+        System.out.print("The first " + n + " Fibonacci numbers are:\n");
         for (int i = 1; i <= n; i++) {
             System.out.print(f2 + " ");
             sum += f2;

@@ -1,17 +1,17 @@
 package task3_1.with_executor_service;
 
 
-
 import java.util.concurrent.*;
 
 public class Main {
-    final static int  THREADS_COUNT = 5;
+    final static int THREADS_COUNT = 5;
+
     public static void main(String[] args) {
 
         ExecutorService executorService = Executors.newFixedThreadPool(THREADS_COUNT);
-        int sum  =0;
+        int sum = 0;
         for (int i = 0; i < THREADS_COUNT; i++) {
-            RandomNumberCallable thread = new RandomNumberCallable("tread"+i);
+            RandomNumberCallable thread = new RandomNumberCallable("tread" + i);
             Future<Integer> submit = executorService.submit(thread);
             try {
                 sum += submit.get();

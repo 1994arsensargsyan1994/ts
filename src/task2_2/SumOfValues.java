@@ -9,7 +9,7 @@ import java.util.Map;
 public class SumOfValues {
 
 
-    Map<String,Integer> sum() throws IOException {
+    Map<String, Integer> sum() throws IOException {
         int x, y, sumX, sumY;
         x = y = sumX = sumY = 0;
         String line;
@@ -23,15 +23,15 @@ public class SumOfValues {
                     x = Integer.parseInt(value);
                     sumX += x;
                 } else {
-                        y = Integer.parseInt(value);
-                        sumY += y;
-                    }
-
+                    y = Integer.parseInt(value);
+                    sumY += y;
                 }
+
             }
-        map.put("x",sumX);
-        map.put("y",sumY);
-        return  map;
         }
+        map.put("x", sumX);
+        map.put("y", sumY);
+        return map;
     }
+}
 

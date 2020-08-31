@@ -3,6 +3,7 @@ package task3_2;
 public class GuaranteedObject {
     private boolean shouldWait;
     private final Object lock = new Object();
+
     void blockThread() {
         synchronized (lock) {
             shouldWait = true;
@@ -15,6 +16,7 @@ public class GuaranteedObject {
             }
         }
     }
+
     void notifyThread() {
         synchronized (lock) {
             shouldWait = false;

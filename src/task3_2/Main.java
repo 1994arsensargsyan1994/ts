@@ -6,6 +6,7 @@ public class Main {
     private static final GuaranteedObject guaranteedObject = new GuaranteedObject();
     private static final AtomicInteger counter = new AtomicInteger();
     private static final int NUMBER_OF_INCREMENTS = 1_000_000;
+
     public static void main(String[] args) {
         System.out.println("Working...\n");
         IncrementerThread incrementerThread = new IncrementerThread();
@@ -13,6 +14,7 @@ public class Main {
         PrinterThread printerThread = new PrinterThread();
         printerThread.start();
     }
+
     static class IncrementerThread extends Thread {
         @Override
         public void run() {
@@ -22,6 +24,7 @@ public class Main {
             }
         }
     }
+
     static class PrinterThread extends Thread {
         @Override
         public void run() {

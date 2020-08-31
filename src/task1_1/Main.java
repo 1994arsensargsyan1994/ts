@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        int mark =  in.nextInt();
+        int mark = in.nextInt();
         new CheckPassFail().checkPassFail(mark);
 
 

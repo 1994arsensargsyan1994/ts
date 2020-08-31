@@ -7,32 +7,32 @@ import java.io.IOException;
 public class CountsOfCharacter {
 
 
-  int countCharacter(String ch) throws IOException {
+    int countCharacter(String ch) throws IOException {
 
 
-      if (ch == null){
-          throw  new NullPointerException("write character in command line ");
-      }
+        if (ch == null) {
+            throw new NullPointerException("write character in command line ");
+        }
 
-      String line;
+        String line;
 
-     int count = 0;
-      try (BufferedReader reader = new BufferedReader(new FileReader(Constants.PATH_FILE))) {
-          while ((line = reader.readLine()) != null) {
+        int count = 0;
+        try (BufferedReader reader = new BufferedReader(new FileReader(Constants.PATH_FILE))) {
+            while ((line = reader.readLine()) != null) {
 
 
-              for (int i = 0; i <line.length(); i++) {
-                  Character character = line.charAt(i);
-                  if (character.equals('e')){
-                      count++;
-                  }
-              }
+                for (int i = 0; i < line.length(); i++) {
+                    Character character = line.charAt(i);
+                    if (character.equals('e')) {
+                        count++;
+                    }
+                }
 
-          }
+            }
 
-      }
-      return count;
-  }
+        }
+        return count;
+    }
 
 
 }
